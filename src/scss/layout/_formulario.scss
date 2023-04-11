@@ -1,0 +1,59 @@
+.formulario{
+    p{
+        font-size: 1.4rem;
+        color: $grisOscuro;
+    }
+
+    label{
+        display: block;
+        font-weight: $bold;
+        color: $grisOscuro;
+        text-transform: uppercase;
+    }
+
+    legend{
+        font-size: 2rem;
+    }
+
+    input:not([type="submit"]){
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        background-color: $blanco;
+        border: 1px solid $gris;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+    }
+
+    textarea{
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        min-height: 10rem;
+        background-color: $blanco;
+        border: 1px solid $gris;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+    }
+
+    select{
+        background-color: $blanco;
+        border: 1px solid $gris;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+
+//Este código sirve para centrar el contenido del radius en un espacio de 30rem
+.forma-contacto{
+    display: flex;
+    max-width: 30rem;
+    justify-content: space-between;
+    align-items: center;
+
+    input[type="radio"]{
+        margin: 0;
+        width: auto;
+    }
+}

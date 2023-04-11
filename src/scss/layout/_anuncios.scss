@@ -1,0 +1,52 @@
+@include tablet{  //Cuando sea igual o mayor que el tamaño definido en tablet hará este estilo
+    .contenedor-anuncios{
+        @include grid(3, 2rem);
+    }
+}
+
+.contenedor-anuncios{
+    width: 90%;
+    margin: auto;
+}
+.anuncio{
+    background-color: lighten($gris, 5);
+    border: 1px solid darken($gris, 10);
+    margin-bottom: 2rem;
+
+    .contenido-anuncio{
+        padding: 2rem;
+    }
+    
+    p, h3{
+        margin: 0;
+    }
+
+}
+
+.precio{
+    color: $verde;
+    font-weight: $bold;
+    font-size: 3rem;
+}
+
+.iconos-caracteristicas{
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li{
+        flex: 1; //toma el 100% en proporcion de los elementos que hay
+        //Para centrar iconos pequeños del anuncio
+        display: flex;
+
+        img{
+            //Para centrar iconos pequeñoos del anuncio
+            flex: 0 0 3rem; //Define el tamaño del icono
+            margin-right: 1rem;
+        }
+
+        p{
+            font-weight: $bold;
+        }
+    }
+}

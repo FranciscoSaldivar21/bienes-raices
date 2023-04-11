@@ -1,0 +1,101 @@
+.dark-mode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet{
+        align-items: flex-end;  //Lo acomoda hasta la derecha
+    }
+    img{
+        width: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        filter: invert(100%);
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+}
+.barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+//Se canceló por el efecto al menu
+/*@include telefono{
+    .navegacion{
+        display: none;
+    }
+}*/
+.navegacion{
+    @include tablet{
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    //Este código se uso para dar efecto al menu en vez del display flex y flex-direction row
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .3s linear; 
+
+    a{
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        text-align: center; 
+        margin-right: 2rem;
+    }
+    a:last-child{
+        margin-right: 0;
+    }
+}
+
+.mostrar{
+    visibility: visible;
+    opacity: 1;
+}
+
+@include tablet{
+    .menu-movil{
+        display: none;
+    }
+}
+
+.menu-movil{
+    img{
+        width: 5rem;
+    }
+}
+
+//Se usó este en vez del de arriba para dar efecto al menu hamburguea
+.mostrar-menu{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+//Solución a problema que se modifica el display de los elementos del menu
+/*
+.mostrar{
+    display: flex;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: row;
+    }
+}*/
